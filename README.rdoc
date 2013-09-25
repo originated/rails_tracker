@@ -1,3 +1,6 @@
 = Tracker
+Active Progress is a Ruby on Rails mountable engine that creates a simple Web UI for your users
+to track development progress through Github Issues.
 
+= License
 This project rocks and uses MIT-LICENSE.

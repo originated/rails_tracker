@@ -1,8 +1,18 @@
-h1 Github Issues
-
-- @issues.each do |i|
-  = i.title
-  br
-  = i.content
-  br
-  = link_to 'Track issue', "#"
+.container-fluid
+  .container
+    .masthead
+      h3.muted Active Progress
+      .navbar
+        .navbar-inner
+          .container
+            ul.nav
+              li.active
+                a href="#" Current issues
+      - @issues.each do |i|
+        h1=i.title
+        p.lead=i.body
+        a.btn.btn-large.btn-success href="#" Track
+        hr
+      .footer
+        p &copy; Company 2013
+        = @yes
