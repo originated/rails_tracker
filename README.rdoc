@@ -1,6 +1,19 @@
 = Tracker
-Active Progress is a Ruby on Rails mountable engine that creates a simple Web UI for your users
+Active Progress is a Ruby on Rails engine that creates a simple Web UI for your users
 to track development progress through Github Issues.
+
+= Getting Started
+Add Active Progress as a Ruby Gem.
+
+```sh
+gem 'active_progress'
+```
+
+Run the following generator to create core files
+
+```sh
+gem 'rails generate active_progress:install'
+```
 
 = License
 This project rocks and uses MIT-LICENSE.
