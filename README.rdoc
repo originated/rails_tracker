@@ -7,6 +7,8 @@ Active Progress currently requires Active Record and will only work on applicati
 as their user authentication system. Active Progress utitlizes various Devise helpers to faciliate
 the interactions for your users to track development tickets & issues.
 
+![ScreenShot](http://dl-web.dropbox.com/get/Public/active_progress.jpg?w=AAD4L4UOTvPan7FHgPqKXWjt9V2muGSIrseQm6Nu-XyAyw)
+
 == Getting Started
 Add Active Progress as a Ruby Gem.
 
