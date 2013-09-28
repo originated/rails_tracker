@@ -1,15 +1,22 @@
-= Tracker
+= Active Progress
 Active Progress is a Ruby on Rails engine that creates a simple Web UI for your users
 to track development progress through Github Issues.
+
+== Current Requirements(important)
+Active Progress currently requires Active Record and will only work on applications which use Devise
+as their User authentication layer. Active Progress utitlizes various Devise helpers to faciliate
+the interactions for your users to track development tickets & issues.
 
 == Getting Started
 Add Active Progress as a Ruby Gem.
 
     gem 'active_progress'
 
-Run the following generator to create core files
+After you install Active Progress and add it to your Gemfile, you need to run the generator:
 
-    gem 'rails generate active_progress:install'
+    rails generate active_progress:install
+
+The generator will install an initializer which describes ALL Active Progress's configuration options and you MUST take a look at it.
 
 == License
 This project rocks and uses MIT-LICENSE.
