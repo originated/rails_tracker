@@ -8,10 +8,12 @@
             ul.nav
               li.active
                 a href="#" Current issues
+              li
+                a href="#" My issues
       - @issues.each do |i|
         h1=i.title
         p.lead=i.body
-        a.btn.btn-large.btn-success href="#" Track
+        = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
         hr
       .footer
         p &copy; Company 2013

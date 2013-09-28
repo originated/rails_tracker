@@ -1,0 +1,9 @@
+doctype
+html
+  head
+    title Tracker
+    = stylesheet_link_tag    "tracker/application", :media => "all"
+    = javascript_include_tag "tracker/application"
+    = csrf_meta_tags
+  body
+    = yield
