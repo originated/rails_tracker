@@ -13,3 +13,4 @@ module ActiveProgress
      end
   end
 end
+

@@ -4,7 +4,7 @@ to track development progress through Github Issues.
 
 == Current Requirements(important)
 Active Progress currently requires Active Record and will only work on applications which use Devise
-as their User authentication layer. Active Progress utitlizes various Devise helpers to faciliate
+as their user authentication system. Active Progress utitlizes various Devise helpers to faciliate
 the interactions for your users to track development tickets & issues.
 
 == Getting Started

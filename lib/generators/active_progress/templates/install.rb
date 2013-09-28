@@ -6,3 +6,4 @@ Tracker.config do |c|
   c.pass = 'github_password'
   c.repo = 'github_repo'
 end
+
