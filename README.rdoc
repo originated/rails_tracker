@@ -18,5 +18,18 @@ After you install Active Progress and add it to your Gemfile, you need to run th
 
 The generator will install an initializer which describes ALL Active Progress's configuration options and you MUST take a look at it.
 
+Copy the migrations which will create tables to store issue/user associations.  Make sure to run your migrations after.
+
+    rake tracker:install:migrations
+
+You will need to mount the engine and set the namespace you want to your routes.rb.
+
+    mount Tracker::Engine => "/tracker"
+
+"/tracker" can be anything you like. This is where you can now direct users to track your Github issues.
+
+== Under the hood
+Coming soon
+
 == License
 This project rocks and uses MIT-LICENSE.
