@@ -5,7 +5,7 @@ module Tracker
     before_filter :authenticate_user!, :only => :track_issue
 
     def index
-      # Instantiate our API methods
+      # Instantiate/setup the main applications Github config settings
       github = Github.new
       @issues = github.issues.list :user => Tracker.config.user, :repo => Tracker.config.repo
     end
