@@ -1,23 +1,12 @@
-.container-fluid
-  .container
-    .masthead
-      h3.muted Active Progress
-      .navbar
-        .navbar-inner
-          .container
-            ul.nav
-              li.active
-                a href="#" Current issues
-              li
-                a href="#" My issues
-      - @issues.each do |i|
-        h1=i.title
-        p.lead=i.body
-        - if current_user.present? && current_user.tracking?(current_user.id,i.id)
-          = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
-        - else
-          = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
-        hr
-      .footer
-        p &copy; Company 2013
-        = @yes
+.container
+  h2 All issues:
+  - @issues.each do |i|
+    h1=i.title
+    p.lead=i.body
+    - if current_user.present? && current_user.tracking?(current_user.id,i.id)
+      = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
+    - else
+      = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
+    hr
+  .footer
+    p &copy; Company 2013

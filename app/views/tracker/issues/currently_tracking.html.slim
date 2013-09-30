@@ -1,0 +1,12 @@
+.container
+  - if @currently_tracked.nil?
+    h2 You are tracking these issues.
+    - @currently_tracked.each do |i|
+      h1=i.title
+      p.lead=i.body
+      = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
+      hr
+    .footer
+      p &copy; Company 2013
+  - else
+    h2 You are presently tracking no issues.

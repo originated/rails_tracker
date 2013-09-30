@@ -2,7 +2,7 @@ require_dependency "tracker/application_controller"
 
 module Tracker
   class IssuesController < ApplicationController
-    before_filter :authenticate_user!, :only => :track_issue
+    before_filter :authenticate_user!, :only => [:track_issue, :currently_tracking]
 
     def index
       # Instantiate/setup the main applications Github config settings
@@ -21,6 +21,10 @@ module Tracker
     end
 
     def un_track
+    end
+
+    def currently_tracking
+      @currently_tracked = UsersIssues.where(:user_id => current_user.id)
     end
 
   end
