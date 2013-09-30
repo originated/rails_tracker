@@ -21,10 +21,18 @@ module Tracker
     end
 
     def un_track
+      # Update corresponding record and change status for the particular issue
+      @issue = UsersIssues.where(:user_id => current_user.id, :issue_id => params[:id])
+      @issue[0].delete
+      redirect_to :back
     end
 
     def currently_tracking
       @currently_tracked = UsersIssues.where(:user_id => current_user.id)
+    end
+
+    def resolved
+      @resolved_issues = UsersIssues.where(:active => false)
     end
 
   end
