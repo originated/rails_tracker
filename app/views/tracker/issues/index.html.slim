@@ -13,7 +13,10 @@
       - @issues.each do |i|
         h1=i.title
         p.lead=i.body
-        = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
+        - if current_user.present? && current_user.tracking?(current_user.id,i.id)
+          = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
+        - else
+          = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
         hr
       .footer
         p &copy; Company 2013
