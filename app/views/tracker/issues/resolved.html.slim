@@ -1,9 +1,11 @@
 .container
   h1 Resolved issues.
   - @issues.each do |i|
-    .span1
-      br
-      a.btn.btn-danger disabled="disabled" closed
-    .span6
-      h3=i.title
-      p.lead=i.body
+    .row
+      .span1
+        br
+        a.btn.btn-danger disabled="disabled" closed
+      .span6
+        h3=i.title
+        p.lead=i.body
+    hr
