@@ -1,7 +1,7 @@
 .container
-  h2 All issues:
+  h1 All issues:
   - @issues.each do |i|
-    h1=i.title
+    h3=i.title
     p.lead=i.body
     - if current_user.present? && current_user.tracking?(current_user.id,i.id)
       = link_to "Untrack", un_track_path(i.id), class: "btn btn-large btn-error", method: :post
