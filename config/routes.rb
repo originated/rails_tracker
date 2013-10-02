@@ -7,4 +7,7 @@ Tracker::Engine.routes.draw do
   get "saved" => "issues#currently_tracking", :as => :saved
   get "resolved" => "issues#resolved", :as => :resolved
 
+  # Payload from Github web hook
+  get "status/change/:payload" => "issues#status_change"
+
 end

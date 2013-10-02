@@ -1,4 +1,5 @@
 require_dependency "tracker/application_controller"
+require 'faraday-http-cache'
 
 module Tracker
   class IssuesController < ApplicationController
@@ -6,11 +7,16 @@ module Tracker
 
     def index
       # Instantiate/setup the main applications Github config settings
-      # Here we display only active issues
-      github  = Github.new
-      @issues = github.issues.all(:user => Tracker.config.user,
-                                  :repo => Tracker.config.repo,
-                                  :labels => Tracker.config.labels)
+      # Cache response headers for rate limiting / conditional check
+      @store  = ActiveSupport::Cache::MemoryStore.new
+
+      @github = Github::Issues.new do |config|
+        config.stack.insert_before Github::Response::Jsonize, Faraday::HttpCache, @store
+      end
+
+      @issues = @github.all(:user => Tracker.config.user,
+                            :repo => Tracker.config.repo,
+                            :labels => Tracker.config.labels)
     end
 
     def track_issue
