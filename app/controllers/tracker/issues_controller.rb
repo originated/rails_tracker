@@ -43,9 +43,15 @@ module Tracker
     end
 
     def resolved
-      # Disply issues which are currently
-      github  = Github.new
-      @issues = github.issues.all(:user => Tracker.config.user,
+      # Instantiate/setup the main applications Github config settings
+      # Cache response headers for rate limiting / conditional check
+      @store  = ActiveSupport::Cache::MemoryStore.new
+
+      @github = Github::Issues.new do |config|
+        config.stack.insert_before Github::Response::Jsonize, Faraday::HttpCache, @store
+      end
+
+      @issues = @github.all(:user => Tracker.config.user,
                                   :repo => Tracker.config.repo,
                                   :state => "closed",
                                   :labels => Tracker.config.labels)
