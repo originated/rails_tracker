@@ -38,6 +38,28 @@ directly in your User Model class.
       # The rest of your User Model
     end
 
+== Set your GitHub Repo to handle closed issues
+
+These next steps will help incorporate your repo hooks and configure the hook to trigger on issues.
+
+First set the webhook url directly in your repo. In the web UI under the admin section, enter a URL matching to your domain with the following format.(Replace example.com
+with your actual domain)
+
+    example.com/tracker/listen
+
+By default Active Progress uses the listen namespace to respond to post updates sent from github.
+
+Github webhooks for a URL by default only fire on repo pushes.  There is currently no way in the web UI to set up webhooks for other events.
+You must set your repo to the issue event via the API directly.
+
+First lets locate the ID of the hook event we want to edit(Example below, replace with your own repo & username). Make sure to note the ID of the hook you just added in the web UI.
+
+    curl https://api.github.com/repos/:username/:repo/hooks --user 'username'
+
+Let's now update the hook to suppot issue events
+
+    curl -H "Content-Type: application/json" --request PATCH "events":"issues" https://api.github.com/repos/:username/:repo/hooks/:id --user 'username'
+
 == Under the hood
 Coming soon.
 
