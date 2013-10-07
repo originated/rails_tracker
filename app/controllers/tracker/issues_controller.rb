@@ -57,5 +57,10 @@ module Tracker
                                   :labels => Tracker.config.labels)
     end
 
+    def listen
+      # responder for post updates from github. The main purpose to update users
+      # that a particular issue has been closed/resolved
+    end
+
   end
 end

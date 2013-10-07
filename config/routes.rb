@@ -10,4 +10,7 @@ Tracker::Engine.routes.draw do
   # Payload from Github web hook
   get "status/change/:payload" => "issues#status_change"
 
+  # Listener for payload from Github
+  post "listen" => 'issues#github_update'
+
 end
