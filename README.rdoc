@@ -38,9 +38,10 @@ directly in your User Model class.
       # The rest of your User Model
     end
 
-== Set your GitHub Repo to handle closed issues
+== Set a hook in your GitHub Repo to handle closed issues
 
-These next steps will help incorporate your repo hooks and configure the hook to trigger on issues.
+These next steps will help incorporate your repo hooks and configure the hook to trigger on issues. Active Progress has mailers built in that will
+alert your users when issues have been closed.
 
 Github webhooks for a URL by default only fire on repo pushes.  There is currently no way in the web UI to set up webhooks for other events.
 You must set your repo to the issue event via the API directly. Follow this example to create a new hook and set the event support with issues
