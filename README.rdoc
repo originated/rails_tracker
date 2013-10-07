@@ -39,7 +39,7 @@ directly in your User Model class.
     end
 
 == Under the hood
-Coming soon
+Coming soon.
 
 == License
 This project rocks and uses MIT-LICENSE.
