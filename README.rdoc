@@ -49,7 +49,8 @@ Make sure to pass this URL when you are creating the hook. By default Active Pro
 Be sure to name the new hook "web".
 
     curl -u 'username' -v -H "Content-Type: application/json" \
-    -X POST -d '{"name": "web", "active": true, "events": ["issues"], "config": {"url": "example.com/tracker/listen", "content_type": "json"}}' \
+    -X POST -d '{"name": "web", "active": true, "events": ["issues"], \
+    "config": {"url": "example.com/tracker/listen", "content_type": "json"}}' \
     https://api.github.com/repos/:username/:repo/hooks
 
     example.com/tracker/listen
