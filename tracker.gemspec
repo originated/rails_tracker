@@ -21,5 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "github_api"
   s.add_dependency "faraday-http-cache"
+  s.add_dependency "delayed_job_active_record"
 
 end

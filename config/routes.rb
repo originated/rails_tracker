@@ -11,6 +11,6 @@ Tracker::Engine.routes.draw do
   get "status/change/:payload" => "issues#status_change"
 
   # Listener for payload from Github
-  post "listen" => 'issues#github_update'
+  post "listen" => 'issues#listen'
 
 end

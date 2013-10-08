@@ -5,7 +5,7 @@
       .span1
        br
        - if current_user.present? && current_user.tracking?(current_user.id,i.id)
-         = link_to "Untrack", un_track_path(i.id), class: "btn btn-large btn-error", method: :post
+         = link_to "Untrack", un_track_path(i.id), class: "btn btn-large btn-warning", method: :post
        - else
          = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
       .span6

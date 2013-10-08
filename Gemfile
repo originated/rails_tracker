@@ -6,6 +6,7 @@ gem "jquery-rails"
 gem "rails"
 gem "github_api"
 gem "faraday-http-cache"
+gem 'delayed_job_active_record'
 
 group :development do
   gem "slim"

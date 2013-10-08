@@ -1,5 +1,6 @@
 require_dependency "tracker/application_controller"
 require 'faraday-http-cache'
+require 'delayed_job_active_record'
 
 module Tracker
   class IssuesController < ApplicationController
@@ -58,8 +59,17 @@ module Tracker
     end
 
     def listen
-      # responder for post updates from github. The main purpose to update users
-      # that a particular issue has been closed/resolved
+      # responder for post updates from github. Logic below is to handle callbacks from Github.
+      if params["issue"]["state"] == "closed"
+        issue_id = params["issue"]["id"]
+        # Local all users tracking the issue
+        users = UsersIssues.where(:issue_id => issue_id)
+        users.each do |user|
+          # Handle the mailer async & delay the job
+          IssueMailer.delay.resolved_alert(user)
+        end
+      end
+      render :nothing => true
     end
 
   end
