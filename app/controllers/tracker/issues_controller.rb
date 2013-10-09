@@ -60,13 +60,17 @@ module Tracker
 
     def listen
       # responder for post updates from github. Logic below is to handle callbacks from Github.
-      if params["issue"]["state"] == "closed"
+      if params["issue"].present? && params["issue"]["state"] == "closed"
         issue_id = params["issue"]["id"]
         # Local all users tracking the issue
-        users = UsersIssues.where(:issue_id => issue_id)
-        users.each do |user|
+        issues = UsersIssues.where(:issue_id => issue_id)
+        issues.each do |issue|
+          usr = User.find(issue.user_id)
           # Handle the mailer async & delay the job
-          IssueMailer.delay.resolved_alert(user)
+          IssueMailer.delay.resolved_alert(usr,issue)
+          # Mark the issue as closed
+          issue.active = false
+          issue.save
         end
       end
       render :nothing => true
