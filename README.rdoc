@@ -60,7 +60,7 @@ You can confirm the hook was created correctly by either viewing directly in the
 
     curl -u 'username' https://api.github.com/repos/:username/:repo/hooks
 
-== Configure delayed job for background processing of alert emails
+== Configure delayed job for Active Progress closed status emails
 
 Active Progress utitlizes delayed job to help process your alert emails. When a callback from Github is sent
 to the listener that a issue has been closed, Active Progress marks the issue as closed for your user and also
