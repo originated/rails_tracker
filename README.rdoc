@@ -60,6 +60,26 @@ You can confirm the hook was created correctly by either viewing directly in the
 
     curl -u 'username' https://api.github.com/repos/:username/:repo/hooks
 
+== Configure delayed job for background processing of alert emails
+
+Active Progress utitlizes delayed job to help process your alert emails. When a callback from Github is sent
+to the listener that a issue has been closed, Active Progress marks the issue as closed for your user and also
+sends an email to update the user of the status.  Since you could potentially have thousands of users to send a
+status update we move this into a background process.
+
+If you already have delayed job working jobs you won't need to follow this setup.  Otherwise make sure to run
+the installation with
+
+    rails generate delayed_job:active_record
+
+Delayed job is a dependency of Active Progress so it is already made available for your project. Next run your migrations
+
+   rake db:migrate
+
+You can familiarize yourself with delayed job and insuring your workers are running by reading more at
+
+    https://github.com/collectiveidea/delayed_job
+
 == Under the hood
 Coming soon.
 
