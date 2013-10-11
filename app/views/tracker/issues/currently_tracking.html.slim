@@ -5,10 +5,10 @@
     h3 You are tracking these open/closed issues:
     - @currently_tracked.each do |i|
       .row
-        .span1
+        .span1 style="width: 90px;"
           br
           - if i.active == false
-            a.btn.btn-danger disabled="disabled" closed
+            a.btn.btn-danger disabled="disabled" resolved
           - else
             = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
         .span6
