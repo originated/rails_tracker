@@ -7,5 +7,6 @@ Tracker.config do |c|
   c.pass   = 'github_password'
   c.repo   = 'active_progress'
   c.labels = 'public'
+  c.title  = 'Active Progress'
 end
 
