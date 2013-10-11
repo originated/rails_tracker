@@ -1,5 +1,8 @@
 .container
-  h1 Resolved issues.
+  - if @issues.blank?
+    h3 Currently there is no resolved issues.
+  - else
+    h3 Resolved issues:
   - @issues.each do |i|
     .row
       .span1

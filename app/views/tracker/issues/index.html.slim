@@ -1,5 +1,8 @@
 .container
-  h1 Open issues:
+  - if @issues.blank?
+    h3 Currently there is no open issues.
+  - else
+    h3 Open Issues:
   - @issues.each do |i|
     .row
       .span1
@@ -13,4 +16,3 @@
         p.lead=i.body
     hr
   .footer
-    p &copy; Company 2013

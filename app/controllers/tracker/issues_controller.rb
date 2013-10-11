@@ -17,6 +17,7 @@ module Tracker
 
       @issues = @github.all(:user => Tracker.config.user,
                             :repo => Tracker.config.repo,
+                            :state => "open",
                             :labels => Tracker.config.labels)
     end
 

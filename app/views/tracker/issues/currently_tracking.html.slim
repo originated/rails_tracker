@@ -1,12 +1,19 @@
 .container
-  - if @currently_tracked.nil?
-    h2 You are tracking these issues.
+  - if @currently_tracked.blank?
+    h3 You are presently tracking no issues.
+  - else
+    h3 You are tracking these open/closed issues:
     - @currently_tracked.each do |i|
-      h1=i.title
-      p.lead=i.body
-      = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
+      .row
+        .span1
+          br
+          - if i.active == false
+            a.btn.btn-danger disabled="disabled" closed
+          - else
+            = link_to "Untrack", "#", class: "btn btn-large btn-error", method: :post
+        .span6
+          h3=i.title
+          p.lead=i.body
       hr
     .footer
-      p &copy; Company 2013
-  - else
-    h2 You are presently tracking no issues.
+
