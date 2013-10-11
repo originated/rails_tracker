@@ -17,5 +17,10 @@ group :development do
   gem "i18n"
 end
 
+group :test do
+  gem "rspec-rails", "~> 2.12.2"
+  gem "factory_girl_rails", "~> 4.0"
+end
+
 
 
