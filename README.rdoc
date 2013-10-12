@@ -80,8 +80,6 @@ You can familiarize yourself with delayed job and insuring your workers are runn
 
     https://github.com/collectiveidea/delayed_job
 
-== Under the hood
-Coming soon.
 
 == License
 This project rocks and uses MIT-LICENSE.
