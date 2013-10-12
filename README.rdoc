@@ -2,6 +2,9 @@
 Active Progress is a mountable Rails engine that enables your users with a web UI
 to track development progress through Github Issues.
 
+Active Progress is a valuable tool for services/products that see value in providing transparency with
+their bug/issue progress directly to the end user.
+
 ![ScreenShot](https://raw.github.com/mcifani/active_progress/master/screenshot1.png)
 
 == Current Requirements(important)
