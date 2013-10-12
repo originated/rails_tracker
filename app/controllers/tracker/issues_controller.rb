@@ -30,14 +30,14 @@ module Tracker
                                                          :issue_id => issue_id,
                                                          :title => issue_title,
                                                          :body => issue_body)
-      redirect_to :back
+      redirect_to_back_if_valid
     end
 
     def un_track
       # Update corresponding record and change status for the particular issue
       @issue = UsersIssues.where(:user_id => current_user.id, :issue_id => params[:id])
-      @issue[0].delete
-      redirect_to :back
+      @issue[0].delete if @issue[0].present?
+      redirect_to_back_if_valid
     end
 
     def currently_tracking
