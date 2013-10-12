@@ -3,8 +3,12 @@ ENV["RAILS_ENV"] ||= 'test'
 
 # Define dummy app location
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
+
 # Define factory girl folder settings
-FactoryGirl.definition_file_paths = [File.expand_path('../spec/factories', __FILE__)]
+# FactoryGirl.definition_file_paths = [File.expand_path('../../spec/factories', __FILE__)]
+FactoryGirl.factories.clear
+FactoryGirl.definition_file_paths = [File.expand_path('../lib/factories', __FILE__)]
+FactoryGirl.reload
 
 require 'rspec/rails'
 require 'rspec/autorun'
@@ -40,5 +44,8 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Devise test helpers
+  config.include Devise::TestHelpers, :type => :controller
 
 end

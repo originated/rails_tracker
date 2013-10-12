@@ -17,13 +17,14 @@ group :development do
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.12.2"
   gem "factory_girl_rails", "~> 4.0"
   gem "sqlite3"
   gem "faker"
+  gem "devise"
 end
 
 group :development, :test do
+  gem "rspec-rails", "~> 2.12.2"
   gem "slim"
 end
 
