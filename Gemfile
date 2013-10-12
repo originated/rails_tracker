@@ -9,7 +9,6 @@ gem "faraday-http-cache"
 gem 'delayed_job_active_record'
 
 group :development do
-  gem "slim"
   gem "better_errors",     "~> 0.9.0" # Web UI to debug exceptions. Go to /__better_errors to access the latest one
   gem "binding_of_caller", "~> 0.7.1" # Retrieve the binding of a method's caller in MRI Ruby >= 1.9.2
   gem "debugger"
@@ -20,7 +19,11 @@ end
 group :test do
   gem "rspec-rails", "~> 2.12.2"
   gem "factory_girl_rails", "~> 4.0"
+  gem "sqlite3"
+  gem "faker"
 end
 
-
+group :development, :test do
+  gem "slim"
+end
 
