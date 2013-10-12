@@ -36,4 +36,21 @@ describe Tracker::IssuesController do
     end
   end
 
+  describe "GET 'current_tracking'" do
+
+    it "should be success" do
+      controller.stub(:authenticate_user!)
+      controller.stub_chain(:current_user,:id)
+      get 'currently_tracking', use_route: :saved
+      response.should be_success
+    end
+
+    it "should not locate any currently tracked issues without existing user" do
+      controller.stub(:authenticate_user!)
+      controller.stub_chain(:current_user,:id)
+      get 'currently_tracking', use_route: :saved
+      assigns(:currently_tracked).should be_empty
+    end
+  end
+
 end
