@@ -7,6 +7,7 @@ gem "rails"
 gem "github_api"
 gem "faraday-http-cache"
 gem 'delayed_job_active_record'
+gem 'gem-this'
 
 group :development do
   gem "better_errors",     "~> 0.9.0" # Web UI to debug exceptions. Go to /__better_errors to access the latest one
