@@ -50,7 +50,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "active_progress"
-  s.version           = "0.3.4"
+  s.version           = "0.3.8"
   s.summary           = "An elegant Rails solution for issue tracking"
   s.description       = "An elegant Rails solution for issue tracking"
   s.author            = "Mike Cifani"
@@ -62,7 +62,7 @@ spec = Gem::Specification.new do |s|
   s.rdoc_options      = %w(--main README.rdoc)
 
   # Add any extra files to include in the gem
-  s.files             = %w(active_progress.gemspec Gemfile Gemfile.lock issues} MIT-LICENSE Rakefile README.rdoc screenshot1.png) + Dir.glob("{test,spec,lib}/**/*")
+  s.files             = %w(active_progress.gemspec Gemfile Gemfile.lock issues} MIT-LICENSE Rakefile README.rdoc screenshot1.png) + Dir.glob("{test,spec,lib,app,db,config,.yardoc}/**/*")
   s.require_paths     = ["lib"]
 
   # If you want to depend on other gems, add them here, along with any

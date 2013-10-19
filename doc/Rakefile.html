@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Rakefile - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./issues}.html">issues}</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/issues}.html">issues}</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/spec/dummy/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_4/spec/dummy/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/issues}.html">issues}</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/spec/dummy/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_5/spec/dummy/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/issues}.html">issues}</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/spec/dummy/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_6/spec/dummy/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/issues}.html">issues}</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/spec/dummy/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./pkg/active_progress-0_3_7/spec/dummy/Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./spec/dummy/README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./spec/dummy/Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveProgress.html">ActiveProgress</a>
+  
+    <li><a href="./ActiveProgress/ApplicationController.html">ActiveProgress::ApplicationController</a>
+  
+    <li><a href="./ActiveProgress/ApplicationHelper.html">ActiveProgress::ApplicationHelper</a>
+  
+    <li><a href="./ActiveProgress/Engine.html">ActiveProgress::Engine</a>
+  
+    <li><a href="./ActiveProgress/Generators.html">ActiveProgress::Generators</a>
+  
+    <li><a href="./ActiveProgress/Generators/InstallGenerator.html">ActiveProgress::Generators::InstallGenerator</a>
+  
+    <li><a href="./ActiveProgress/Issue.html">ActiveProgress::Issue</a>
+  
+    <li><a href="./ActiveProgress/IssueMailer.html">ActiveProgress::IssueMailer</a>
+  
+    <li><a href="./ActiveProgress/IssuesController.html">ActiveProgress::IssuesController</a>
+  
+    <li><a href="./ActiveProgress/IssuesHelper.html">ActiveProgress::IssuesHelper</a>
+  
+    <li><a href="./ActiveProgress/UsersIssues.html">ActiveProgress::UsersIssues</a>
+  
+    <li><a href="./Tracker.html">Tracker</a>
+  
+    <li><a href="./Tracker/IssueMailerTest.html">Tracker::IssueMailerTest</a>
+  
+    <li><a href="./Tracker/IssueTest.html">Tracker::IssueTest</a>
+  
+    <li><a href="./Tracker/IssuesControllerTest.html">Tracker::IssuesControllerTest</a>
+  
+    <li><a href="./Tracker/IssuesHelperTest.html">Tracker::IssuesHelperTest</a>
+  
+    <li><a href="./Tracker/UsersIssuesTest.html">Tracker::UsersIssuesTest</a>
+  
+    <li><a href="./Dummy.html">Dummy</a>
+  
+    <li><a href="./Dummy/Application.html">Dummy::Application</a>
+  
+    <li><a href="./AddDefaultActiveColumn.html">AddDefaultActiveColumn</a>
+  
+    <li><a href="./AddIssueIdIssues.html">AddIssueIdIssues</a>
+  
+    <li><a href="./AddRelationUsersIssues.html">AddRelationUsersIssues</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CreateTrackerIssues.html">CreateTrackerIssues</a>
+  
+    <li><a href="./CreateTrackerUsersIssues.html">CreateTrackerUsersIssues</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>#!/usr/bin/env rake begin</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;bundler/setup&#39;</span>
+</pre>
+
+<p>rescue LoadError</p>
+
+<pre>puts &#39;You must `gem install bundler` and `bundle install` to run rake tasks&#39;</pre>
+
+<p>end begin</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rdoc/task&#39;</span>
+</pre>
+
+<p>rescue LoadError</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rdoc/rdoc&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rake/rdoctask&#39;</span>
+<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Task</span> = <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">RDocTask</span>
+</pre>
+
+<p>end</p>
+
+<p>RDoc::Task.new(:rdoc) do |rdoc|</p>
+
+<pre>rdoc.rdoc_dir = &#39;rdoc&#39;
+rdoc.title    = &#39;Active Progress&#39;
+rdoc.options &lt;&lt; &#39;--line-numbers&#39;
+rdoc.rdoc_files.include(&#39;README.rdoc&#39;)
+rdoc.rdoc_files.include(&#39;lib     .rb&#39;)</pre>
+
+<p>end</p>
+
+<p>APP_RAKEFILE = File.expand_path(“../spec/dummy/Rakefile”, __FILE__) load
+&#39;rails/tasks/engine.rake&#39;</p>
+
+<p>Bundler::GemHelper.install_tasks</p>
+
+<p>require “rubygems” require “rubygems/package_task” require “rdoc/task”</p>
+
+<p>require “rspec-rails” require “rspec/core/rake_task”
+RSpec::Core::RakeTask.new do |t|</p>
+
+<pre>t.rspec_opts = %w(--format documentation --colour)</pre>
+
+<p>end</p>
+
+<p>task :default =&gt; [“test”, “spec”]</p>
+
+<p># This builds the actual gem. For details of what all these options # mean,
+and other ones you can add, check the documentation here: # #   <a
+href="http://rubygems.org/read/chapter/20">rubygems.org/read/chapter/20</a>
+# spec = Gem::Specification.new do |s|</p>
+
+<pre># Change these as appropriate
+s.name              = &quot;active_progress&quot;
+s.version           = &quot;0.3.4&quot;
+s.summary           = &quot;An elegant Rails solution for issue tracking&quot;
+s.description       = &quot;An elegant Rails solution for issue tracking&quot;
+s.author            = &quot;Mike Cifani&quot;
+s.email             = &quot;mike@activeprogress.me&quot;
+s.homepage          = &quot;http://www.activeprogress.me&quot;
+
+s.has_rdoc          = true
+s.extra_rdoc_files  = %w(README.rdoc)
+s.rdoc_options      = %w(--main README.rdoc)
+
+# Add any extra files to include in the gem
+s.files             = %w(active_progress.gemspec Gemfile Gemfile.lock issues} MIT-LICENSE Rakefile README.rdoc screenshot1.png) + Dir.glob(&quot;{test,spec,lib,app,db,config}/   *&quot;)
+s.require_paths     = [&quot;lib&quot;]
+
+# If you want to depend on other gems, add them here, along with any
+# relevant versions
+# s.add_dependency(&quot;some_other_gem&quot;, &quot;~&gt; 0.1.0&quot;)
+s.add_dependency &quot;github_api&quot;
+s.add_dependency &quot;faraday-http-cache&quot;
+s.add_dependency &quot;delayed_job_active_record&quot;
+
+# If your tests use any gems, include them here
+s.add_development_dependency(&quot;rspec&quot;)</pre>
+
+<p>end</p>
+
+<p># This task actually builds the gem. We also regenerate a static # .gemspec
+file, which is useful if something (i.e. GitHub) will # be automatically
+building a gem for this project. If you&#39;re not # using GitHub, edit as
+appropriate. # # To publish your gem online, install the
+&#39;gemcutter&#39; gem; Read more  # about that here: <a
+href="http://gemcutter.org/pages/gem_docs">gemcutter.org/pages/gem_docs</a>
+Gem::PackageTask.new(spec) do |pkg|</p>
+
+<pre>pkg.gem_spec = spec</pre>
+
+<p>end</p>
+
+<p>desc “Build the gemspec file #{spec.name}.gemspec” task :gemspec do</p>
+
+<pre class="ruby"><span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/#{spec.name}.gemspec&quot;</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;w&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">to_ruby</span> }
+</pre>
+
+<p>end</p>
+
+<p># If you don&#39;t want to generate the .gemspec file, just remove this
+line. Reasons # why you might want to generate a gemspec: #  - using
+bundler with a git source #  - building the gem without rake (i.e. gem
+build blah.gemspec) #  - maybe others? task :package =&gt; :gemspec</p>
+
+<p># Generate documentation RDoc::Task.new do |rd|</p>
+
+<pre>rd.main = &quot;README.rdoc&quot;
+rd.rdoc_files.include(&quot;README.rdoc&quot;, &quot;lib/   *.rb&quot;)
+rd.rdoc_dir = &quot;rdoc&quot;</pre>
+
+<p>end</p>
+
+<p>desc &#39;Clear out RDoc and generated packages&#39; task :clean =&gt;
+[:clobber_rdoc, :clobber_package] do</p>
+
+<pre>rm &quot;#{spec.name}.gemspec&quot;</pre>
+
+<p>end</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
