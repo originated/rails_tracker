@@ -31,7 +31,7 @@ You will need to mount the engine and set the namespace you want to your routes.
 
     mount ActiveProgress::Engine => "/active_progress"
 
-"/tracker" can be anything you like. This is where you can now direct users to track your Github issues.
+"/active_progress" can be anything you like. This is where you can now direct users to track your Github issues.
 
 You will need to extend Active Progress in your particular User Model. You need to do this by including the module
 directly in your User Model class.

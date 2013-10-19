@@ -14,7 +14,7 @@ end
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Tracker'
+  rdoc.title    = 'Active Progress'
   rdoc.options << '--line-numbers'
   rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
@@ -50,7 +50,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "active_progress"
-  s.version           = "0.3.2"
+  s.version           = "0.3.4"
   s.summary           = "An elegant Rails solution for issue tracking"
   s.description       = "An elegant Rails solution for issue tracking"
   s.author            = "Mike Cifani"
