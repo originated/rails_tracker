@@ -50,7 +50,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "active_progress"
-  s.version           = "0.3.0"
+  s.version           = "0.3.2"
   s.summary           = "An elegant Rails solution for issue tracking"
   s.description       = "An elegant Rails solution for issue tracking"
   s.author            = "Mike Cifani"
@@ -68,6 +68,9 @@ spec = Gem::Specification.new do |s|
   # If you want to depend on other gems, add them here, along with any
   # relevant versions
   # s.add_dependency("some_other_gem", "~> 0.1.0")
+  s.add_dependency "github_api"
+  s.add_dependency "faraday-http-cache"
+  s.add_dependency "delayed_job_active_record"
 
   # If your tests use any gems, include them here
   s.add_development_dependency("rspec")

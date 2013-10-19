@@ -1,4 +1,4 @@
-Tracker::Engine.routes.draw do
+ActiveProgress::Engine.routes.draw do
 
   root :to => "issues#index"
 

@@ -1,7 +1,10 @@
 PATH
   remote: .
   specs:
-    active_progress (0.3.0)
+    active_progress (0.3.2)
+      delayed_job_active_record
+      faraday-http-cache
+      github_api
 
 GEM
   remote: https://rubygems.org/

@@ -1,0 +1,10 @@
+doctype
+html
+  head
+    title Tracker
+    = stylesheet_link_tag    "active_progress/application", :media => "all"
+    = javascript_include_tag "active_progress/application"
+    = csrf_meta_tags
+  body
+    = render "layouts/active_progress/header"
+    = yield

@@ -25,11 +25,11 @@ The generator will install an initializer which describes ALL Active Progress's 
 
 Copy the migrations which will create tables to store issue/user associations.  Make sure to run your migrations after.
 
-    rake tracker:install:migrations
+    rake active_progress:install:migrations
 
 You will need to mount the engine and set the namespace you want to your routes.rb.
 
-    mount Tracker::Engine => "/tracker"
+    mount ActiveProgress::Engine => "/active_progress"
 
 "/tracker" can be anything you like. This is where you can now direct users to track your Github issues.
 
@@ -37,7 +37,7 @@ You will need to extend Active Progress in your particular User Model. You need 
 directly in your User Model class.
 
     class User < ActiveRecord::Base
-      include Tracker
+      include ActiveProgress
       # The rest of your User Model
     end
 
@@ -57,7 +57,7 @@ Be sure to name the new hook "web".
     "config": {"url": "example.com/tracker/listen", "content_type": "json"}}' \
     https://api.github.com/repos/:username/:repo/hooks
 
-    example.com/tracker/listen
+    example.com/active_progress/listen
 
 You can confirm the hook was created correctly by either viewing directly in the admin section of the repo or with a get request
 

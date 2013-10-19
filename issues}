@@ -1,0 +1,4 @@
+{
+  "message": "Body should be a JSON Hash",
+  "documentation_url": "http://developer.github.com/v3"
+}

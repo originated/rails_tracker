@@ -1,0 +1,5 @@
+# Sample localization file for English
+
+en:
+  issue_mailer:
+    from: hello@example.com

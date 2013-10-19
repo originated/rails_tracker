@@ -1,0 +1,28 @@
+.container-fluid
+  .container
+    .masthead
+      h3.muted=ActiveProgress.config.title
+      .navbar
+        .navbar-inner
+          .container
+            ul.nav
+              - if current_page?(root_path)
+                li.active
+                  = link_to "Open Issues", root_path
+              - else
+                li
+                  = link_to "Open Issues", root_path
+              - if current_page?(resolved_path)
+                li.active
+                  = link_to "Resolved Issues", resolved_path
+              - else
+                li
+                  = link_to "Resolved Issues", resolved_path
+            ul.nav.pull-right
+              - if current_page?(saved_path)
+                li.active
+                  = link_to "Saved Issues", saved_path
+              - else
+                li
+                  = link_to "Saved Issues", saved_path
+
