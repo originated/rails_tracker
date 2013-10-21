@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: RailsTracker::IssuesController
+  
+    &mdash; Documentation by YARD 0.8.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../RailsTracker.html" title="RailsTracker (module)">RailsTracker</a></span></span>
+     &raquo; 
+    <span class="title">IssuesController</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: RailsTracker::IssuesController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="RailsTracker::ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="RailsTracker::ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">RailsTracker::IssuesController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controllers/rails_tracker/issues_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#currently_tracking-instance_method" title="#currently_tracking (instance method)">- (Object) <strong>currently_tracking</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listen-instance_method" title="#listen (instance method)">- (Object) <strong>listen</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolved-instance_method" title="#resolved (instance method)">- (Object) <strong>resolved</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#track_issue-instance_method" title="#track_issue (instance method)">- (Object) <strong>track_issue</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#un_track-instance_method" title="#un_track (instance method)">- (Object) <strong>un_track</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="RailsTracker::ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#redirect_to_back_if_valid-instance_method" title="RailsTracker::ApplicationController#redirect_to_back_if_valid (method)">#redirect_to_back_if_valid</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="currently_tracking-instance_method">
+  
+    - (<tt>Object</tt>) <strong>currently_tracking</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_currently_tracking'>currently_tracking</span>
+  <span class='ivar'>@currently_tracked</span> <span class='op'>=</span> <span class='const'>UsersIssues</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='symbol'>:user_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index-instance_method">
+  
+    - (<tt>Object</tt>) <strong>index</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
+  <span class='comment'># Instantiate/setup the main applications Github config settings
+</span>  <span class='comment'># Cache response headers for rate limiting / conditional check
+</span>  <span class='ivar'>@store</span>  <span class='op'>=</span> <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>Cache</span><span class='op'>::</span><span class='const'>MemoryStore</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+  <span class='ivar'>@github</span> <span class='op'>=</span> <span class='const'>Github</span><span class='op'>::</span><span class='const'>Issues</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+    <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_insert_before'>insert_before</span> <span class='const'>Github</span><span class='op'>::</span><span class='const'>Response</span><span class='op'>::</span><span class='const'>Jsonize</span><span class='comma'>,</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>HttpCache</span><span class='comma'>,</span> <span class='ivar'>@store</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@issues</span> <span class='op'>=</span> <span class='ivar'>@github</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='symbol'>:user</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span>
+                        <span class='symbol'>:repo</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_repo'>repo</span><span class='comma'>,</span>
+                        <span class='symbol'>:state</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='symbol'>:labels</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_labels'>labels</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listen-instance_method">
+  
+    - (<tt>Object</tt>) <strong>listen</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listen'>listen</span>
+  <span class='comment'># responder for post updates from github. Logic below is to handle callbacks from Github.
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>issue</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>issue</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>state</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>closed</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_issue_id'>issue_id</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>issue</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='comment'># Local all users tracking the issue
+</span>    <span class='id identifier rubyid_issues'>issues</span> <span class='op'>=</span> <span class='const'>UsersIssues</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='symbol'>:issue_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue_id'>issue_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span>
+      <span class='id identifier rubyid_usr'>usr</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+      <span class='comment'># Handle the mailer async &amp; delay the job
+</span>      <span class='const'>IssueMailer</span><span class='period'>.</span><span class='id identifier rubyid_delay'>delay</span><span class='period'>.</span><span class='id identifier rubyid_resolved_alert'>resolved_alert</span><span class='lparen'>(</span><span class='id identifier rubyid_usr'>usr</span><span class='comma'>,</span><span class='id identifier rubyid_issue'>issue</span><span class='rparen'>)</span>
+      <span class='comment'># Mark the issue as closed
+</span>      <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span> <span class='op'>=</span> <span class='kw'>false</span>
+      <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:nothing</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolved-instance_method">
+  
+    - (<tt>Object</tt>) <strong>resolved</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolved'>resolved</span>
+  <span class='comment'># Instantiate/setup the main applications Github config settings
+</span>  <span class='comment'># Cache response headers for rate limiting / conditional check
+</span>  <span class='ivar'>@store</span>  <span class='op'>=</span> <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>Cache</span><span class='op'>::</span><span class='const'>MemoryStore</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+  <span class='ivar'>@github</span> <span class='op'>=</span> <span class='const'>Github</span><span class='op'>::</span><span class='const'>Issues</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+    <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_insert_before'>insert_before</span> <span class='const'>Github</span><span class='op'>::</span><span class='const'>Response</span><span class='op'>::</span><span class='const'>Jsonize</span><span class='comma'>,</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>HttpCache</span><span class='comma'>,</span> <span class='ivar'>@store</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@issues</span> <span class='op'>=</span> <span class='ivar'>@github</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='symbol'>:user</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span>
+                              <span class='symbol'>:repo</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_repo'>repo</span><span class='comma'>,</span>
+                              <span class='symbol'>:state</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>closed</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                              <span class='symbol'>:labels</span> <span class='op'>=&gt;</span> <span class='const'>RailsTracker</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_labels'>labels</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="track_issue-instance_method">
+  
+    - (<tt>Object</tt>) <strong>track_issue</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_track_issue'>track_issue</span>
+  <span class='id identifier rubyid_issue_id'>issue_id</span>    <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_issue_title'>issue_title</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:title</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_issue_body'>issue_body</span>  <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:body</span><span class='rbracket'>]</span>
+  <span class='comment'># Find or create a record for a user who indicates they want to track an issue
+</span>  <span class='const'>UsersIssues</span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by_user_id_and_issue_id'>find_or_create_by_user_id_and_issue_id</span><span class='lparen'>(</span><span class='symbol'>:user_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+                                                     <span class='symbol'>:issue_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue_id'>issue_id</span><span class='comma'>,</span>
+                                                     <span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue_title'>issue_title</span><span class='comma'>,</span>
+                                                     <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue_body'>issue_body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_redirect_to_back_if_valid'>redirect_to_back_if_valid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="un_track-instance_method">
+  
+    - (<tt>Object</tt>) <strong>un_track</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/rails_tracker/issues_controller.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_un_track'>un_track</span>
+  <span class='comment'># Update corresponding record and change status for the particular issue
+</span>  <span class='ivar'>@issue</span> <span class='op'>=</span> <span class='const'>UsersIssues</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='symbol'>:user_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='symbol'>:issue_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@issue</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='kw'>if</span> <span class='ivar'>@issue</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='id identifier rubyid_redirect_to_back_if_valid'>redirect_to_back_if_valid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Oct 20 17:44:55 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

@@ -1,6 +1,6 @@
-require "active_progress/engine"
+require "rails_tracker/engine"
 
-module ActiveProgress
+module RailsTracker
 
    def tracking?(user,issue)
      # Lookup to see if user is tracking the particular issue

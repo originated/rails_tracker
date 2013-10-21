@@ -49,20 +49,20 @@ task :default => ["test", "spec"]
 spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
-  s.name              = "active_progress"
-  s.version           = "0.3.8"
+  s.name              = "rails_tracker"
+  s.version           = "0.3.0"
   s.summary           = "An elegant Rails solution for issue tracking"
   s.description       = "An elegant Rails solution for issue tracking"
   s.author            = "Mike Cifani"
-  s.email             = "mike@activeprogress.me"
-  s.homepage          = "http://www.activeprogress.me"
+  s.email             = "mike@railstracker.com"
+  s.homepage          = "http://www.railstracker.com"
 
   s.has_rdoc          = true
   s.extra_rdoc_files  = %w(README.rdoc)
   s.rdoc_options      = %w(--main README.rdoc)
 
   # Add any extra files to include in the gem
-  s.files             = %w(active_progress.gemspec Gemfile Gemfile.lock issues} MIT-LICENSE Rakefile README.rdoc screenshot1.png) + Dir.glob("{test,spec,lib,app,db,config,.yardoc}/**/*")
+  s.files             = %w(rails_tracker.gemspec Gemfile Gemfile.lock issues} MIT-LICENSE Rakefile README.rdoc screenshot1.png) + Dir.glob("{test,spec,lib,app,db,config,.yardoc}/**/*")
   s.require_paths     = ["lib"]
 
   # If you want to depend on other gems, add them here, along with any

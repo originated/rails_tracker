@@ -1,6 +1,6 @@
 class CreateTrackerUsersIssues < ActiveRecord::Migration
   def change
-    create_table :active_progress_users_issues do |t|
+    create_table :rails_tracker_users_issues do |t|
       t.integer :id
       t.text :title
       t.text :body

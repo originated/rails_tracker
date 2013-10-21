@@ -1,55 +1,55 @@
-= Active Progress
-Active Progress is a mountable Rails engine that enables your users with a web UI
+= Rails Tracker
+Rails Tracker is a mountable Rails engine that enables your users with a web UI
 to track development progress through Github Issues.
 
-Active Progress is a valuable tool for services/products that see value in providing transparency with
+Rails Tracker is a valuable tool for services/products that see value in providing transparency with
 their bug/issue progress directly to the end user.
 
 ![ScreenShot](https://raw.github.com/mcifani/active_progress/master/screenshot1.png)
 
 == Current Requirements(important)
-Active Progress currently requires Active Record and will only work on applications which use Devise
-as their user authentication system. Active Progress utitlizes various Devise helpers to faciliate
+Rails Tracker currently requires Active Record and will only work on applications which use Devise
+as their user authentication system. Rails Tracker utitlizes various Devise helpers to faciliate
 the interactions for your users to track development tickets & issues.
 
 == Getting Started
-Add Active Progress as a Ruby Gem.
+Add Rails Tracker as a Ruby Gem.
 
-    gem 'active_progress'
+    gem 'rails_tracker'
 
-After you install Active Progress and add it to your Gemfile, you need to run the generator:
+After you install Rails Tracker and add it to your Gemfile, you need to run the generator:
 
-    rails generate active_progress:install
+    rails generate rails_tracker:install
 
 The generator will install an initializer which describes ALL Active Progress's configuration options and you MUST take a look at it.
 
 Copy the migrations which will create tables to store issue/user associations.  Make sure to run your migrations after.
 
-    rake active_progress:install:migrations
+    rake rails_tracker:install:migrations
 
 You will need to mount the engine and set the namespace you want to your routes.rb.
 
-    mount ActiveProgress::Engine => "/active_progress"
+    mount ActiveProgress::Engine => "/rails_tracker"
 
-"/active_progress" can be anything you like. This is where you can now direct users to track your Github issues.
+"/rails_tracker" can be anything you like. This is where you can now direct users to track your Github issues.
 
-You will need to extend Active Progress in your particular User Model. You need to do this by including the module
+You will need to extend  Rails Tracker in your particular User Model. You need to do this by including the module
 directly in your User Model class.
 
     class User < ActiveRecord::Base
-      include ActiveProgress
+      include RailsTracker
       # The rest of your User Model
     end
 
 == Set a hook in your GitHub Repo to handle closed issues
 
-These next steps will help incorporate your repo hooks and configure the hook to trigger on issues. Active Progress has mailers built in that will
+These next steps will help incorporate your repo hooks and configure the hook to trigger on issues. Rails Tracker has mailers built in that will
 alert your users when issues have been closed.
 
 Github webhooks for a URL by default only fire on repo pushes.  There is currently no way in the web UI to set up webhooks for other events.
 You must set your repo to the issue event via the API directly. Follow this example to create a new hook and set the event support with issues
 
-Make sure to pass this URL when you are creating the hook. By default Active Progress uses the listen namespace to respond to post updates sent from github.
+Make sure to pass this URL when you are creating the hook. By default Rails Tracker uses the listen namespace to respond to post updates sent from github.
 Be sure to name the new hook "web".
 
     curl -u 'username' -v -H "Content-Type: application/json" \
@@ -57,16 +57,16 @@ Be sure to name the new hook "web".
     "config": {"url": "example.com/tracker/listen", "content_type": "json"}}' \
     https://api.github.com/repos/:username/:repo/hooks
 
-    example.com/active_progress/listen
+    example.com/rails_tracker/listen
 
 You can confirm the hook was created correctly by either viewing directly in the admin section of the repo or with a get request
 
     curl -u 'username' https://api.github.com/repos/:username/:repo/hooks
 
-== Configure delayed job for Active Progress closed status emails
+== Configure delayed job for Rails Tracker closed status emails
 
-Active Progress utitlizes delayed job to help process your alert emails. When a callback from Github is sent
-to the listener that a issue has been closed, Active Progress marks the issue as closed for your user and also
+Rails Tracker utitlizes delayed job to help process your alert emails. When a callback from Github is sent
+to the listener that a issue has been closed, Rails Tracker marks the issue as closed for your user and also
 sends an email to update the user of the status.  Since you could potentially have thousands of users to send a
 status update we move this into a background process.
 
@@ -75,7 +75,7 @@ the installation with
 
     rails generate delayed_job:active_record
 
-Delayed job is a dependency of Active Progress so it is already made available for your project. Next run your migrations
+Delayed job is a dependency of Rails Tracker so it is already made available for your project. Next run your migrations
 
    rake db:migrate
 

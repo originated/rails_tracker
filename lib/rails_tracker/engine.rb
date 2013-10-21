@@ -1,8 +1,8 @@
-module ActiveProgress
+module RailsTracker
   class Engine < ::Rails::Engine
     require "github_api"
 
-    isolate_namespace ActiveProgress
+    isolate_namespace RailsTracker
 
     config.generators do |g|
       g.test_framework :rspec

@@ -1,0 +1,18 @@
+.container
+  - if @issues.blank?
+    h3 Currently there is no open issues.
+  - else
+    h3 Open Issues:
+  - @issues.each do |i|
+    .row
+      .span1
+       br
+       - if current_user.present? && current_user.tracking?(current_user.id,i.id)
+         = link_to "Untrack", un_track_path(i.id), class: "btn btn-large btn-warning", method: :post
+       - else
+         = link_to "Track", track_issue_path(i), class: "btn btn-large btn-success", method: :post
+      .span6
+        h3=i.title
+        p.lead=i.body
+    hr
+  .footer

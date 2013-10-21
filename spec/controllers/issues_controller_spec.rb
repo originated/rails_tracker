@@ -1,18 +1,18 @@
 require 'spec_helper'
 require 'debugger'
 
-describe ActiveProgress::IssuesController do
+describe RailsTracker::IssuesController do
 
   before(:each) do
-    ActiveProgress.config.user   = "mcifani"
-    ActiveProgress.config.repo   = "active_progress"
-    ActiveProgress.config.labels = "public"
+    RailsTracker.config.user   = "mcifani"
+    RailsTracker.config.repo   = "active_progress"
+    RailsTracker.config.labels = "public"
   end
 
   describe "GET 'index'" do
 
     it "should be successful" do
-      ActiveProgress.config.state = "open"
+      RailsTracker.config.state = "open"
       get 'index', use_route: :root
       response.should be_success
     end
@@ -21,7 +21,7 @@ describe ActiveProgress::IssuesController do
   describe "GET 'resolved'" do
 
     it "should be success on current issues marked with closed state" do
-      ActiveProgress.config.state = "closed"
+      RailsTracker.config.state = "closed"
       get 'resolved', use_route: :resolved
       response.should be_success
     end

@@ -62,12 +62,12 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'>
-<h1 id="label-Active+Progress">Active Progress</h1>
+<h1 id="label-Rails+Tracker">Rails Tracker</h1>
 
-<p>Active Progress is a mountable Rails engine that enables your users with a
+<p>Rails Tracker is a mountable Rails engine that enables your users with a
 web UI to track development progress through Github Issues.</p>
 
-<p>Active Progress is a valuable tool for services/products that see value in
+<p>Rails Tracker is a valuable tool for services/products that see value in
 providing transparency with their bug/issue progress directly to the end
 user.</p>
 
@@ -77,21 +77,21 @@ src="https://raw.github.com/mcifani/active_progress/master/screenshot1.png"
 
 <h2 id="label-Current+Requirements%28important%29">Current Requirements(important)</h2>
 
-<p>Active Progress currently requires Active Record and will only work on
-applications which use Devise as their user authentication system. Active
-Progress utitlizes various Devise helpers to faciliate the interactions for
+<p>Rails Tracker currently requires Active Record and will only work on
+applications which use Devise as their user authentication system. Rails
+Tracker utitlizes various Devise helpers to faciliate the interactions for
 your users to track development tickets &amp; issues.</p>
 
 <h2 id="label-Getting+Started">Getting Started</h2>
 
-<p>Add Active Progress as a Ruby Gem.</p>
+<p>Add Rails Tracker as a Ruby Gem.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>active_progress</span><span class='tstring_end'>&#39;</span></span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rails_tracker</span><span class='tstring_end'>&#39;</span></span></code></pre>
 
-<p>After you install Active Progress and add it to your Gemfile, you need to
-run the generator:</p>
+<p>After you install Rails Tracker and add it to your Gemfile, you need to run
+the generator:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rails'>rails</span> <span class='id identifier rubyid_generate'>generate</span> <span class='label'>active_progress:</span><span class='id identifier rubyid_install'>install</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rails'>rails</span> <span class='id identifier rubyid_generate'>generate</span> <span class='label'>rails_tracker:</span><span class='id identifier rubyid_install'>install</span></code></pre>
 
 <p>The generator will install an initializer which describes ALL Active
 Progress&#39;s configuration options and you MUST take a look at it.</p>
@@ -99,22 +99,22 @@ Progress&#39;s configuration options and you MUST take a look at it.</p>
 <p>Copy the migrations which will create tables to store issue/user
 associations.  Make sure to run your migrations after.</p>
 
-<pre class="code ruby"><code class="ruby">rake active_progress:install:migrations</code></pre>
+<pre class="code ruby"><code class="ruby">rake rails_tracker:install:migrations</code></pre>
 
 <p>You will need to mount the engine and set the namespace you want to your
 routes.rb.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_mount'>mount</span> <span class='const'>ActiveProgress</span><span class='op'>::</span><span class='const'>Engine</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/active_progress</span><span class='tstring_end'>&quot;</span></span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_mount'>mount</span> <span class='const'>ActiveProgress</span><span class='op'>::</span><span class='const'>Engine</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rails_tracker</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
 
-<p>“/active_progress” can be anything you like. This is where you can now
-direct users to track your Github issues.</p>
+<p>“/rails_tracker” can be anything you like. This is where you can now direct
+users to track your Github issues.</p>
 
-<p>You will need to extend Active Progress in your particular User Model. You
+<p>You will need to extend  Rails Tracker in your particular User Model. You
 need to do this by including the module directly in your User Model class.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>User</span> <span class='op'>&lt;</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>Base</span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>ActiveProgress</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'>RailsTracker</span>
   <span class='comment'># The rest of your User Model
 </span><span class='kw'>end</span>
 </code></pre>
@@ -122,7 +122,7 @@ need to do this by including the module directly in your User Model class.</p>
 <h2 id="label-Set+a+hook+in+your+GitHub+Repo+to+handle+closed+issues">Set a hook in your GitHub Repo to handle closed issues</h2>
 
 <p>These next steps will help incorporate your repo hooks and configure the
-hook to trigger on issues. Active Progress has mailers built in that will
+hook to trigger on issues. Rails Tracker has mailers built in that will
 alert your users when issues have been closed.</p>
 
 <p>Github webhooks for a URL by default only fire on repo pushes.  There is
@@ -130,27 +130,27 @@ currently no way in the web UI to set up webhooks for other events. You
 must set your repo to the issue event via the API directly. Follow this
 example to create a new hook and set the event support with issues</p>
 
-<p>Make sure to pass this URL when you are creating the hook. By default
-Active Progress uses the listen namespace to respond to post updates sent
-from github. Be sure to name the new hook “web”.</p>
+<p>Make sure to pass this URL when you are creating the hook. By default Rails
+Tracker uses the listen namespace to respond to post updates sent from
+github. Be sure to name the new hook “web”.</p>
 
 <pre class="code ruby"><code class="ruby">curl -u &#39;username&#39; -v -H &quot;Content-Type: application/json&quot; \
 -X POST -d &#39;{&quot;name&quot;: &quot;web&quot;, &quot;active&quot;: true, &quot;events&quot;: [&quot;issues&quot;], \
 &quot;config&quot;: {&quot;url&quot;: &quot;example.com/tracker/listen&quot;, &quot;content_type&quot;: &quot;json&quot;}}&#39; \
 https://api.github.com/repos/:username/:repo/hooks
 
-example.com/active_progress/listen</code></pre>
+example.com/rails_tracker/listen</code></pre>
 
 <p>You can confirm the hook was created correctly by either viewing directly
 in the admin section of the repo or with a get request</p>
 
 <pre class="code ruby"><code class="ruby">curl -u &#39;username&#39; https://api.github.com/repos/:username/:repo/hooks</code></pre>
 
-<h2 id="label-Configure+delayed+job+for+Active+Progress+closed+status+emails">Configure delayed job for Active Progress closed status emails</h2>
+<h2 id="label-Configure+delayed+job+for+Rails+Tracker+closed+status+emails">Configure delayed job for Rails Tracker closed status emails</h2>
 
-<p>Active Progress utitlizes delayed job to help process your alert emails.
-When a callback from Github is sent to the listener that a issue has been
-closed, Active Progress marks the issue as closed for your user and also
+<p>Rails Tracker utitlizes delayed job to help process your alert emails. When
+a callback from Github is sent to the listener that a issue has been
+closed, Rails Tracker marks the issue as closed for your user and also
 sends an email to update the user of the status.  Since you could
 potentially have thousands of users to send a status update we move this
 into a background process.</p>
@@ -160,7 +160,7 @@ this setup.  Otherwise make sure to run the installation with</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rails'>rails</span> <span class='id identifier rubyid_generate'>generate</span> <span class='label'>delayed_job:</span><span class='id identifier rubyid_active_record'>active_record</span></code></pre>
 
-<p>Delayed job is a dependency of Active Progress so it is already made
+<p>Delayed job is a dependency of Rails Tracker so it is already made
 available for your project. Next run your migrations</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='label'>db:</span><span class='id identifier rubyid_migrate'>migrate</span></code></pre>
@@ -176,7 +176,7 @@ running by reading more at</p>
 </div></div>
 
     <div id="footer">
-  Generated on Sat Oct 19 16:09:40 2013 by
+  Generated on Sun Oct 20 17:44:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>

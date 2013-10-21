@@ -1,0 +1,14 @@
+.container
+  - if @issues.blank?
+    h3 Currently there is no resolved issues.
+  - else
+    h3 Resolved issues:
+  - @issues.each do |i|
+    .row
+      .span1 style="width: 90px;"
+        br
+        a.btn.btn-danger disabled="disabled" Resolved
+      .span6
+        h3=i.title
+        p=i.body
+    hr

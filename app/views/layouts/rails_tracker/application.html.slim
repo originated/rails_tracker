@@ -1,0 +1,10 @@
+doctype
+html
+  head
+    title Rails Tracker
+    = stylesheet_link_tag    "rails_tracker/application", :media => "all"
+    = javascript_include_tag "rails_tracker/application"
+    = csrf_meta_tags
+  body
+    = render "layouts/rails_tracker/header"
+    = yield

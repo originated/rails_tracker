@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    active_progress (0.3.8)
+    rails_tracker (0.3.0)
       delayed_job_active_record
       faraday-http-cache
       github_api
@@ -186,7 +186,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_progress!
   better_errors (~> 0.9.0)
   binding_of_caller (~> 0.7.1)
   debugger
@@ -200,6 +199,7 @@ DEPENDENCIES
   i18n
   jquery-rails
   rails
+  rails_tracker!
   rspec
   rspec-rails (~> 2.12.2)
   sextant
