@@ -9,7 +9,7 @@ their bug/issue progress directly to the end user.
 
 == Current Requirements(important)
 Rails Tracker currently requires Active Record and will only work on applications which use Devise
-as their user authentication system. Rails Tracker utitlizes various Devise helpers to faciliate
+as their user authentication system. Rails Tracker utilizes various Devise helpers to faciliate
 the interactions for your users to track development tickets & issues.
 
 == Getting Started

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_tracker (0.3.0)
+    rails_tracker (0.3.1)
       delayed_job_active_record
       faraday-http-cache
       github_api

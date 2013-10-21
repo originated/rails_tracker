@@ -50,9 +50,9 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "rails_tracker"
-  s.version           = "0.3.0"
-  s.summary           = "An elegant Rails solution for issue tracking"
-  s.description       = "An elegant Rails solution for issue tracking"
+  s.version           = "0.3.1"
+  s.summary           = "An elegant Rails solution for issue tracking through Github issues"
+  s.description       = "An elegant Rails solution for issue tracking through Github issues"
   s.author            = "Mike Cifani"
   s.email             = "mike@railstracker.com"
   s.homepage          = "http://www.railstracker.com"
